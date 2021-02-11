@@ -45,16 +45,16 @@ The styling should be simple, plain but deliberate.
 
 The initial page should show a simple form with inputs for the following field:
 
-[] Auto Purchase Price (Currency)
-[] Auto Make (Text)
-[] Auto Model (Text)
-[] User Estimated Yearly Income (Currency)
-[] User Estimated Credit Score (Number from 300-850)
+// [x] Auto Purchase Price (Currency)
+// [x] Auto Make (Text)
+// [x] Auto Model (Text)
+// [x] User Estimated Yearly Income (Currency)
+// [x] User Estimated Credit Score (Number from 300-850)
 
-[] These fields are all required and should validate to type.
-[] Provide feedback to the user when they wrong or missing.
-[] There should be space for marketing copy (Lorum Ipsem)
-and controls for moving forward.
+// [x] These fields are all required and should validate to type.
+// [x] Provide feedback to the user when they wrong or missing.
+// [] There should be space for marketing copy (Lorum Ipsem)
+// and controls for moving forward.
 
 - New Account Page
   If the api call does not return a disqualification message(see below), this page

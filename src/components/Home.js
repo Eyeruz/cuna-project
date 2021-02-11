@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-// [] Auto Purchase Price (Currency)
-// [] Auto Make (Text)
-// [] Auto Model (Text)
-// [] User Estimated Yearly Income (Currency)
-// [] User Estimated Credit Score (Number from 300-850)
+// [x] Auto Purchase Price (Currency)
+// [x] Auto Make (Text)
+// [x] Auto Model (Text)
+// [x] User Estimated Yearly Income (Currency)
+// [x] User Estimated Credit Score (Number from 300-850)
 
-// [] These fields are all required and should validate to type.
-// [] Provide feedback to the user when they wrong or missing.
+// [x] These fields are all required and should validate to type.
+// [x] Provide feedback to the user when they wrong or missing.
 // [] There should be space for marketing copy (Lorum Ipsem)
 // and controls for moving forward.
 
@@ -16,7 +16,7 @@ const Home = () => {
   const [autoMake, setAutoMake] = useState("");
   const [autoModel, setAutoModel] = useState("");
   const [yearlyIncome, setYearlyIncome] = useState(0);
-  const [creditScore, setCreditScore] = useState(350);
+  const [creditScore, setCreditScore] = useState(300);
 
   const handleSubmit = (e) => {
     e.preventDefault();
