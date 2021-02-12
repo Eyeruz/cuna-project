@@ -32,10 +32,10 @@ in a no-pass from the interview team:
 
    # Requirements ------------
 
-[] Your application should lead a user through the initial portion of qualifying
+[x] Your application should lead a user through the initial portion of qualifying
 for an auto loan.
 
-[] It should consist of a landing page to collect basic info
+[x] It should consist of a landing page to collect basic info
 about both the car they are interested in buying and their own financial
 situation.
 
@@ -85,7 +85,7 @@ The initial page should show a simple form with inputs for the following field:
   should return a positive qualification flag. A `Bad Request` response should be returned
   for any auto purchase price above $1,000,000.
 
-# ------------ if time
+# ------ if time
 
 1. [] Design docs - Explain your thinking clearly in an overview document helps us
    and future readers (including yourself) better understand your thinking and your

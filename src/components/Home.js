@@ -1,33 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
-
-// [x] Auto Purchase Price (Currency)
-// [x] Auto Make (Text)
-// [x] Auto Model (Text)
-// [x] User Estimated Yearly Income (Currency)
-// [x] User Estimated Credit Score (Number from 300-850)
-
-// [x] These fields are all required and should validate to type.
-// [x] Provide feedback to the user when they wrong or missing.
-// [] There should be space for marketing copy (Lorum Ipsem)
-// and controls for moving forward.
-
+import { connect } from "react-redux";
 const Home = () => {
-  //   const [autoPrice, setAutoPrice] = useState(0);
-  //   const [autoMake, setAutoMake] = useState("");
-  //   const [autoModel, setAutoModel] = useState("");
-  //   const [yearlyIncome, setYearlyIncome] = useState(0);
-  //   const [creditScore, setCreditScore] = useState(300);
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     setAutoPrice(0);
-  //     setAutoMake("");
-  //     setAutoModel("");
-  //     setYearlyIncome(0);
-  //     setCreditScore(350);
-  //   };
-
   return (
     <Formik
       initialValues={{
@@ -40,6 +15,7 @@ const Home = () => {
       onSubmit={(values, { setSubmitting, resetForm }) => {
         setTimeout(() => {
           console.log("Loading...", values);
+
           setSubmitting(false);
           resetForm();
         }, 500);
@@ -158,4 +134,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default connect(null)(Home);
