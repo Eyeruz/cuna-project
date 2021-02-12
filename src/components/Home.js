@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Formik } from "formik";
-import * as EmailValidator from "email-validator";
 import * as Yup from "yup";
 
 // [x] Auto Purchase Price (Currency)

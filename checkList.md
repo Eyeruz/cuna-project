@@ -16,19 +16,19 @@ We expect all submissions to have the following:
 To be clear, many of the following issues will either reflect poorly or result
 in a no-pass from the interview team:
 
-1. [] Unstructured code/Single commit - We expect any results to be reflective of
-   production quality, maintainable code. Writing the entirety of the challenge in a
-   single file, or committing it once is not reflective of that quality standard.
+1. [x] Unstructured code/Single commit - We expect any results to be reflective of
+       production quality, maintainable code. Writing the entirety of the challenge in a
+       single file, or committing it once is not reflective of that quality standard.
 
 2. [] Scope Creep - An important part of professional engineering is producing a
    product that matches requirements. Submissions that go far beyond what is asked will
    reduce our ability to engage with your submission and is not a good use of your
    time.
 
-3. [] Re-implementing standard libraries - Spending your limited time writing lists,
-   http servers, security algorithms, etc. provided by the standard library is in general
-   a bad idea and specifically not a good use of your time. It's okay to stick to the proven
-   software!
+3. [x] Re-implementing standard libraries - Spending your limited time writing lists,
+       http servers, security algorithms, etc. provided by the standard library is in general
+       a bad idea and specifically not a good use of your time. It's okay to stick to the proven
+       software!
 
    # Requirements ------------
 
@@ -39,7 +39,7 @@ in a no-pass from the interview team:
    that will redirect the user to either a new account creation page or a
    disqualification notice.
 
-The styling should be simple, plain but deliberate.
+[] The styling should be simple, plain but deliberate.
 
 # Landing Page
 
@@ -56,16 +56,17 @@ The initial page should show a simple form with inputs for the following field:
 // [] There should be space for marketing copy (Lorum Ipsem)
 // and controls for moving forward.
 
-- New Account Page
-  If the api call does not return a disqualification message(see below), this page
-  should have a simple account creation form including:
+# New Account Page
 
-  Username (Text)
-  Password (Text)
+// If the api call does not return a disqualification message(see below), this page
+// should have a simple account creation form including:
 
-The username should be validated as an email and password should require more than 8
-characters and a number or special character. Ensure the user types their password
-twice to validate their intent.
+// [x] Username (Text)
+// [x] Password (Text)
+
+// [x]The username should be validated as an email and password should require more than 8
+// characters and a number or special character. Ensure the user types their password
+// twice to validate their intent.
 
 - Disqualification Page
   Display a simple page with the disqualification message that comes from

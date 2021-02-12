@@ -3,17 +3,6 @@ import { Formik } from "formik";
 import * as EmailValidator from "email-validator";
 import * as Yup from "yup";
 
-// - New Account Page
-//   If the api call does not return a disqualification message(see below), this page
-//   should have a simple account creation form including:
-
-//  [x] Username (Text)
-//   [x] Password (Text)
-
-// [x]The username should be validated as an email and password should require more than 8
-// characters and a number or special character. Ensure the user types their password
-// twice to validate their intent.
-
 const NewAccout = () => (
   <Formik
     initialValues={{ email: "", password: "", passwordconfrimation: "" }}
