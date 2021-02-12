@@ -32,12 +32,16 @@ in a no-pass from the interview team:
 
    # Requirements ------------
 
-   Your application should lead a user through the initial portion of qualifying
-   for an auto loan. It should consist of a landing page to collect basic info
-   about both the car they are interested in buying and their own financial
-   situation. Based on this, you should be able to make a simulated network call
-   that will redirect the user to either a new account creation page or a
-   disqualification notice.
+[] Your application should lead a user through the initial portion of qualifying
+for an auto loan.
+
+[] It should consist of a landing page to collect basic info
+about both the car they are interested in buying and their own financial
+situation.
+
+[] Based on this, you should be able to make a simulated network call
+that will redirect the user to either a new account creation page or a
+disqualification notice.
 
 [] The styling should be simple, plain but deliberate.
 
@@ -68,10 +72,10 @@ The initial page should show a simple form with inputs for the following field:
 // characters and a number or special character. Ensure the user types their password
 // twice to validate their intent.
 
-- Disqualification Page
-  Display a simple page with the disqualification message that comes from
-  the api call as well as fake information to get in contact with a customer service.
-  There should be no further way to get off this page or re-enter the information.
+- [x] Disqualification Page
+      Display a simple page with the disqualification message that comes from
+      the api call as well as fake information to get in contact with a customer service.
+      There should be no further way to get off this page or re-enter the information.
 
 - API call
   You should implement a mock fetch call for your backend communication. This call should
