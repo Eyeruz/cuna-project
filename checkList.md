@@ -20,10 +20,10 @@ in a no-pass from the interview team:
        production quality, maintainable code. Writing the entirety of the challenge in a
        single file, or committing it once is not reflective of that quality standard.
 
-2. [] Scope Creep - An important part of professional engineering is producing a
-   product that matches requirements. Submissions that go far beyond what is asked will
-   reduce our ability to engage with your submission and is not a good use of your
-   time.
+2. [x] Scope Creep - An important part of professional engineering is producing a
+       product that matches requirements. Submissions that go far beyond what is asked will
+       reduce our ability to engage with your submission and is not a good use of your
+       time.
 
 3. [x] Re-implementing standard libraries - Spending your limited time writing lists,
        http servers, security algorithms, etc. provided by the standard library is in general
@@ -78,8 +78,11 @@ The initial page should show a simple form with inputs for the following field:
       There should be no further way to get off this page or re-enter the information.
 
 - API call
-  You should implement a mock fetch call for your backend communication. This call should
+  [x]You should implement a mock fetch call for your backend communication.
+
+  [x]This call should
   have the same interface as the real fetch and return a promise wrapped response object.
+
   The response should return disqualify message (Lorum Ipsem is fine) if the purchase price
   is more than 1/5th of the income or their estimated credit is below 600. Otherwise it
   should return a positive qualification flag. A `Bad Request` response should be returned

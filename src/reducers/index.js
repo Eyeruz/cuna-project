@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import UserReducer from "./userReducer";
-import LoanReducer from "./loanReducer";
+import userReducer from "./userReducer";
+import loanReducer from "./loanReducer";
 
 export default combineReducers({
-  users: UserReducer,
-  loans: LoanReducer,
+  users: userReducer,
+  loans: loanReducer,
 });

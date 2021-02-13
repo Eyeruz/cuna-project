@@ -4,7 +4,7 @@ const Disqualification = () => {
   return (
     <div className="Disqualified">
       <h1 className="sadface"> :(</h1>
-
+      {/* bring in the backend(api) message here */}
       <h3 className="h3Disqualified">
         {" "}
         sorry your not qualified for a loan at this time

@@ -1,4 +1,4 @@
-export default function qualifiedCheck() {
+export const qualifiedCheck = () => {
   return (dispatch) => {
     fetch("https://60260cf4186b4a001777fb7d.mockapi.io/autoloan/form", {
       method: "GET",
@@ -10,4 +10,4 @@ export default function qualifiedCheck() {
       .then((res) => res.json())
       .then((data) => console.log(data));
   };
-}
+};

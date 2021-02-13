@@ -1,23 +1,23 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { Formik } from "formik";
 import { connect } from "react-redux";
+import { qualifiedCheck } from "../actions/userActions";
 import * as EmailValidator from "email-validator";
+import { bindActionCreators } from "redux";
+import { useHistory } from "react-router-dom";
 import * as Yup from "yup";
 
-const NewAccout = () => {
-  // useEffect(() => {
-  //   qualifiedCheck(values);
-  // }, []);
-
+const NewAccout = ({ qualifiedCheck }) => {
+  const history = useHistory();
   return (
     <Formik
       initialValues={{ email: "", password: "", passwordconfrimation: "" }}
-      onSubmit={(values, { setSubmitting, resetForm }) => {
+      onSubmit={(values, { setSubmitting, resetForm, setFieldError }) => {
         setTimeout(() => {
-          console.log("Logging in...", values);
-          setSubmitting(false);
+          alert(JSON.stringify(values, null, 2));
+          qualifiedCheck(values, history, setFieldError, setSubmitting);
           resetForm();
-        }, 500);
+        }, 400);
       }}
       validationSchema={Yup.object().shape({
         email: Yup.string().email().required("No Email Provided"),
@@ -88,6 +88,7 @@ const NewAccout = () => {
                 {errors.passwordconfrimation}
               </div>
             )}
+            <> </>
             <button type="submit" disabled={isSubmitting}>
               Login
             </button>
@@ -97,4 +98,5 @@ const NewAccout = () => {
     </Formik>
   );
 };
-export default connect(null)(NewAccout);
+
+export default connect(null, { qualifiedCheck })(NewAccout);
