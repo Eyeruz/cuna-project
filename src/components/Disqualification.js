@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { qualifiedCheck } from "../actions/loanActions";
 import { connect } from "react-redux";
 
 const Disqualification = ({ qualifiedCheck, message }) => {
   // const qualified = qualifiedCheck[0];
+  // const mountedRef = useRef(true);
+
+  // useEffect(() => {
+  //   return () => {
+  //     mountedRef.current = false;
+  //   };
+  // }, []);
+
   return (
     <div className="Disqualified">
       <h1 className="sadface"> :(</h1>

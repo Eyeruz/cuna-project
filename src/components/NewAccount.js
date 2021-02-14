@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect, useRef } from "react";
 import { Formik } from "formik";
 import { connect } from "react-redux";
 // import { qualifiedCheck } from "../actions/userActions";
@@ -9,6 +9,13 @@ import * as Yup from "yup";
 
 const NewAccout = ({ message, userinfo }) => {
   const history = useHistory();
+  const mountedRef = useRef(true);
+
+  useEffect(() => {
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
   return (
     <div>
       <h1 className="qualified">

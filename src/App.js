@@ -1,17 +1,17 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { connect } from "react-redux";
 import Home from "./components/Home";
-import NewAccont from "./components/NewAccout";
+import NewAccont from "./components/NewAccount";
 import Disqualification from "./components/Disqualification";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  NavLink,
+  Redirect,
 } from "react-router-dom";
 import QualificationCheck from "./components/QualificationCheck";
 
-function App() {
+function App({ info }) {
   return (
     <div className="App">
       {" "}
@@ -20,9 +20,25 @@ function App() {
         {/* make a redirect where if the login page is accessed with out user info it is redirected to the home page */}
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/qualified" component={NewAccont} />
-          <Route exact path="/disqualified" component={Disqualification} />
-          <Route exact path="/checking" component={QualificationCheck} />
+          <Route
+            exact
+            path="/qualified"
+            render={(props) =>
+              info ? <NewAccont {...props} /> : <Redirect to="/" />
+            }
+          />
+          <Route
+            exact
+            path="/disqualified"
+            render={(props) =>
+              info ? <Disqualification {...props} /> : <Redirect to="/" />
+            }
+          />
+          <Route
+            exact
+            path="/checking"
+            render={(props) => (info ? <QualificationCheck /> : <Redirect />)}
+          />
           <Route render={() => <p> sorry this page doesnt exist</p>} />{" "}
         </Switch>{" "}
       </Router>
@@ -30,6 +46,11 @@ function App() {
   );
 }
 
-// bring in mapstatetoprops and userinfo... for the if statement.
-
-export default App;
+// bring in mapstatetoprops and userinfo... for the if statem
+const mapStateToProps = (state) => {
+  return {
+    userinfo: state.users.userInfo,
+    info: state.users.info,
+  };
+};
+export default connect(mapStateToProps)(App);

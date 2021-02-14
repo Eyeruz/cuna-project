@@ -1,6 +1,6 @@
 const initalState = {
   loading: false,
-  loggedin: false,
+  info: false,
   userInfo: {},
 };
 // - API call
@@ -24,6 +24,7 @@ export default (state = initalState, action) => {
       return {
         ...state,
         userInfo: action.values,
+        info: true,
       };
     default:
       return state;
