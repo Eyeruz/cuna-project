@@ -20,19 +20,14 @@ const Home = ({ qualifiedCheck, userInfo }) => {
       }}
       onSubmit={(values, { setSubmitting, resetForm }) => {
         setTimeout(() => {
-          // console.log("Logging in...", values);
           qualifiedCheck(setSubmitting);
           userInfo(values);
 
           setSubmitting(false);
           resetForm();
-
-          //get the user inputs map through it, and check to see if it
-          // complies with the auto loan qualification check list
-          // use history to direct the user to the appropreate place
-
-          //
-          history.push("/checking");
+          values.autoPrice >= 1000000
+            ? history.push("/error")
+            : history.push("/checking");
         }, 500);
       }}
       validationSchema={Yup.object().shape({
