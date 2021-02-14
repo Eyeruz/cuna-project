@@ -8,6 +8,7 @@ import {
   Switch,
   Route,
   Redirect,
+  Link,
 } from "react-router-dom";
 import QualificationCheck from "./components/QualificationCheck";
 
@@ -22,24 +23,19 @@ function App({ info }) {
           <Route exact path="/" component={Home} />
           <Route
             exact
-            path="/qualified"
-            render={(props) =>
-              info ? <NewAccont {...props} /> : <Redirect to="/" />
-            }
-          />
-          <Route
-            exact
-            path="/disqualified"
-            render={(props) =>
-              info ? <Disqualification {...props} /> : <Redirect to="/" />
-            }
-          />
-          <Route
-            exact
             path="/checking"
-            render={(props) => (info ? <QualificationCheck /> : <Redirect />)}
+            render={(props) =>
+              info ? <QualificationCheck /> : <Redirect to="/random" />
+            }
           />
-          <Route render={() => <p> sorry this page doesnt exist</p>} />{" "}
+          <Route
+            render={() => (
+              <p>
+                {" "}
+                sorry this page doesnt exist... <Link to="/">go back</Link>
+              </p>
+            )}
+          />{" "}
         </Switch>{" "}
       </Router>
     </div>

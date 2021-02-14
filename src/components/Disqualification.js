@@ -14,7 +14,7 @@ const Disqualification = ({ qualifiedCheck, message }) => {
 
   return (
     <div className="Disqualified">
-      <h1 className="sadface"> :(</h1>
+      <h1 className="sadface"> 😑 </h1>
       {/* bring in the backend(api) message here */}
       <h3 className="h3Disqualified">
         {" "}

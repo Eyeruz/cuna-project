@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Disqualification from "./Disqualification";
 import { qualifiedCheck } from "../actions/loanActions";
-import { useHistory } from "react-router-dom";
 import Loader from "react-loader-spinner";
 import { connect } from "react-redux";
 import NewAccount from "./NewAccount";
@@ -13,20 +12,20 @@ import NewAccount from "./NewAccount";
 //   for any auto purchase price above $1,000,000.
 
 const QualificationCheck = ({ qualifiedCheck, userinfo }) => {
-  // const [qualified, setQualified] = useState(false);
-
-  const history = useHistory();
+  const [loader, setLoader] = useState(true);
   const onefifth = (1 / 5) * userinfo.yearlyIncome;
-
+  useEffect(() => {
+    setLoader(false);
+  });
   return (
     <div className="Disqualified">
       <Loader
-        type="TailSpin"
-        color="black"
+        type="Oval"
+        color="gray"
         height={80}
         width={80}
         className="loader"
-        timeout={500}
+        visible={loader}
       />
       {userinfo.autoPrice > onefifth || userinfo.creditScore < 600 ? (
         <Disqualification />

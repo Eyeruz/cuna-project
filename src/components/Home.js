@@ -58,91 +58,106 @@ const Home = ({ qualifiedCheck, userInfo }) => {
           handleSubmit,
         } = props;
         return (
-          <form onSubmit={handleSubmit}>
-            <h1>Auto Loan</h1>
+          <div className="formWrapper">
+            <form className="firstform" onSubmit={handleSubmit}>
+              <h1 className="formHeader">Auto Loan</h1>
 
-            <h3> Fill out this form to pre qualify for an auto loan </h3>
-            <label htmlFor="autoPrice"> Auto Purchase Price: </label>
-            <input
-              type="number"
-              min="1"
-              id="autoPrice"
-              name="autoPrice"
-              value={values.autoPrice}
-              placeholder="Auto Purchase Price"
-              onChange={handleChange}
-              className={errors.autoPrice && touched.autoPrice && "error"}
-            />
-            {errors.autoPrice && touched.autoPrice && (
-              <div className="input-error">{errors.autoPrice}</div>
-            )}
+              <h3> Fill out this form to pre qualify for an auto loan </h3>
+              <div className="formFeildWrapper">
+                <label htmlFor="autoPrice"> Auto Purchase Price: </label>
+                <input
+                  type="number"
+                  min="1"
+                  id="autoPrice"
+                  name="autoPrice"
+                  value={values.autoPrice}
+                  placeholder="Auto Purchase Price"
+                  onChange={handleChange}
+                  className={errors.autoPrice && touched.autoPrice && "error"}
+                />
+                {errors.autoPrice && touched.autoPrice && (
+                  <div className="input-error">{errors.autoPrice}</div>
+                )}
+              </div>
+              <div className="formFeildWrapper">
+                <label htmlFor="autoMake"> Auto Make: </label>
 
-            <label htmlFor="autoMake"> Auto Make: </label>
+                <input
+                  type="text"
+                  id="autoMake"
+                  name="autoMake"
+                  value={values.autoMake}
+                  placeholder="Auto Make"
+                  onChange={handleChange}
+                  className={errors.autoMake && touched.autoMake && "error"}
+                />
+                {errors.autoMake && touched.autoMake && (
+                  <div className="input-error">{errors.autoMake}</div>
+                )}
+              </div>
+              <div className="formFeildWrapper">
+                <label htmlFor="autoModel"> Auto Model: </label>
 
-            <input
-              type="text"
-              id="autoMake"
-              name="autoMake"
-              value={values.autoMake}
-              placeholder="Auto Make"
-              onChange={handleChange}
-              className={errors.autoMake && touched.autoMake && "error"}
-            />
-            {errors.autoMake && touched.autoMake && (
-              <div className="input-error">{errors.autoMake}</div>
-            )}
-            <label htmlFor="autoModel"> Auto Model: </label>
+                <input
+                  type="text"
+                  id="autoModel"
+                  name="autoModel"
+                  value={values.autoModel}
+                  placeholder="Auto Model"
+                  onChange={handleChange}
+                  className={errors.autoModel && touched.autoModel && "error"}
+                />
+                {errors.autoModel && touched.autoModel && (
+                  <div className="input-error">{errors.autoModel}</div>
+                )}
+              </div>
+              <div className="formFeildWrapper">
+                <label htmlFor="yearlyIncome"> Yearly Income: </label>
 
-            <input
-              type="text"
-              id="autoModel"
-              name="autoModel"
-              value={values.autoModel}
-              placeholder="Auto Model"
-              onChange={handleChange}
-              className={errors.autoModel && touched.autoModel && "error"}
-            />
-            {errors.autoModel && touched.autoModel && (
-              <div className="input-error">{errors.autoModel}</div>
-            )}
+                <input
+                  type="integer"
+                  id="yearlyIncome"
+                  name="yearlyIncome"
+                  value={values.yearlyIncome}
+                  placeholder="Yearly Income"
+                  onChange={handleChange}
+                  className={
+                    errors.yearlyIncome && touched.yearlyIncome && "error"
+                  }
+                />
+                {errors.yearlyIncome && touched.yearlyIncome && (
+                  <div className="input-error">{errors.yearlyIncome}</div>
+                )}
+              </div>
+              <div className="formFeildWrapper">
+                <label htmlFor="creditScore"> Credit Score: </label>
 
-            <label htmlFor="yearlyIncome"> Yearly Income: </label>
+                <input
+                  type="number"
+                  min="300"
+                  max="850"
+                  id="creditScore"
+                  name="creditScore"
+                  value={values.creditScore}
+                  placeholder="Credit Score"
+                  onChange={handleChange}
+                  className={
+                    errors.creditScore && touched.creditScore && "error"
+                  }
+                />
+                {errors.creditScore && touched.creditScore && (
+                  <div className="input-error">{errors.creditScore}</div>
+                )}
+              </div>
 
-            <input
-              type="integer"
-              id="yearlyIncome"
-              name="yearlyIncome"
-              value={values.yearlyIncome}
-              placeholder="Yearly Income"
-              onChange={handleChange}
-              className={errors.yearlyIncome && touched.yearlyIncome && "error"}
-            />
-            {errors.yearlyIncome && touched.yearlyIncome && (
-              <div className="input-error">{errors.yearlyIncome}</div>
-            )}
-            <label htmlFor="creditScore"> Credit Score: </label>
+              <> </>
 
-            <input
-              type="number"
-              min="300"
-              max="850"
-              id="creditScore"
-              name="creditScore"
-              value={values.creditScore}
-              placeholder="Credit Score"
-              onChange={handleChange}
-              className={errors.creditScore && touched.creditScore && "error"}
-            />
-            {errors.creditScore && touched.creditScore && (
-              <div className="input-error">{errors.creditScore}</div>
-            )}
-            <> </>
-
-            <button type="submit" alt="submit">
-              {" "}
-              Submit
-            </button>
-          </form>
+              <button type="submit" alt="submit">
+                {" "}
+                Submit
+              </button>
+            </form>
+          </div>
         );
       }}
     </Formik>

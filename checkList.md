@@ -2,13 +2,13 @@
 
 We expect all submissions to have the following:
 
-1. [] Build instructions - Include a simple README or other file giving clear,
-   concise instructions on how to build/run your code.
+1. [x] Build instructions - Include a simple README or other file giving clear,
+       concise instructions on how to build/run your code.
 
-2. []Repeatable builds - All of engineers should be able to take your submission
+2. [x]Repeatable builds - All of engineers should be able to take your submission
    and instructions and run them without any major, obvious issues.
 
-3. []Version history - Version control and history is an important part of our
+3. [x]Version history - Version control and history is an important part of our
    process and we expect it to be a part of yours too. We like and prefer git.
 
 # Gotchas --------
@@ -39,11 +39,11 @@ for an auto loan.
 about both the car they are interested in buying and their own financial
 situation.
 
-[] Based on this, you should be able to make a simulated network call
+[x] Based on this, you should be able to make a simulated network call
 that will redirect the user to either a new account creation page or a
 disqualification notice.
 
-[] The styling should be simple, plain but deliberate.
+[x] The styling should be simple, plain but deliberate.
 
 # Landing Page
 
@@ -57,7 +57,7 @@ The initial page should show a simple form with inputs for the following field:
 
 // [x] These fields are all required and should validate to type.
 // [x] Provide feedback to the user when they wrong or missing.
-// [] There should be space for marketing copy (Lorum Ipsem)
+// [x] There should be space for marketing copy (Lorum Ipsem)
 // and controls for moving forward.
 
 # New Account Page
@@ -84,9 +84,9 @@ The initial page should show a simple form with inputs for the following field:
   have the same interface as the real fetch and return a promise wrapped response object.
 
   [x]The response should return disqualify message (Lorum Ipsem is fine) if the purchase price
-  is more than 1/5th of the income or their estimated credit is below 600. 
+  is more than 1/5th of the income or their estimated credit is below 600.
   [x]Otherwise it
-  should return a positive qualification flag. 
+  should return a positive qualification flag.
   [x]A `Bad Request` response should be returned
   for any auto purchase price above $1,000,000.
 
